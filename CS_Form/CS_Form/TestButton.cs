@@ -11,9 +11,11 @@ namespace CS_Form
 {
     internal class TestButton : Button
     {
+        Form1 _form1;
         int number;
-        public TestButton(int x,int y,int width, int height,int numeric)
+        public TestButton(Form1 form1,int x,int y,int width, int height,int numeric)
         {
+            _form1 = form1;
             number = numeric;
             Click += OnClick;
             Text =""+ numeric;
@@ -22,7 +24,7 @@ namespace CS_Form
         }
         public void OnClick(object sender, EventArgs e)
         {
-            MessageBox.Show(""+number);
+            _form1.LabelTextUpdate(Text);
         }
 
     }
