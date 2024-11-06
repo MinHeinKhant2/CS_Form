@@ -22,9 +22,14 @@ namespace CS_Form
             Location = new Point(x,y);
             Size = new Size(width,height);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnClick(object sender, EventArgs e)
         {
-            _form1.LabelTextUpdate(Text);
+            _form1.LabelTextUpdate(""+number);
         }
 
     }

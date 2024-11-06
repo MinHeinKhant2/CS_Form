@@ -54,7 +54,7 @@ namespace CS_Form
         /// label の文字を更新する
         /// </summary>
         /// <param name="str"></param>
-        public void LabelTextUpdate (string str)
+        public void LabelTextUpdate(string str)
         {
             _testLabel.TextUpdate(str);
         }

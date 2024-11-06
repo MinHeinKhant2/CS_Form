@@ -10,6 +10,7 @@ namespace CS_Form
 {
     internal class TestLabel:Label
     {
+        string number;
         public TestLabel(int x, int y, int width, int height,string str)
         { 
             Text =str;
@@ -24,7 +25,8 @@ namespace CS_Form
 
         public void TextUpdate(string str)
         {
-            Text = str;
+            number = number +str;
+            Text = number;
         }
 
 
