@@ -19,18 +19,19 @@ namespace CS_Form
             //int y = 0;
             //int width = 100;
             //int height = 100;
+            //    InitializeComponent();
             //for (int i = 0; i < 10; i++)
             //{
             //    x = (x % 3) * 100;
             //    y = (y / 3) * 100;
-            //    InitializeComponent();
+
             //    TestButton testButton = new TestButton(x, y, width, height);
             //    Controls.Add(testButton);
 
 
 
             //}
-                InitializeComponent();
+            InitializeComponent();
             for (int i = 0; i < 10; i++)
 
             {
