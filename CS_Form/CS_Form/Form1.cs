@@ -14,6 +14,7 @@ namespace CS_Form
     public partial class Form1 : Form
     {
         TestLabel _testLabel;
+        TestTextBox _testTextBox;
         public Form1()
             
         {
@@ -41,13 +42,15 @@ namespace CS_Form
                 Controls.Add(testButton);
             }
            
-              _testLabel = new TestLabel(100, 300, 100, 500, "it's label");
+              _testLabel = new TestLabel(10, 400, 500, 100, "it's label");
             Controls.Add(_testLabel);
+            _testTextBox = new TestTextBox(10, 500, 500, 100, "it's textbox");
+            Controls.Add(_testTextBox);
             //Label label = new Label();
             //label.Location = new Point(0, 400);
             //label.Text = "label";
             //Controls.Add(label);
-            
+
 
         }
         /// <summary>
