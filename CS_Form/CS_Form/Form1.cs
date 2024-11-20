@@ -27,7 +27,6 @@ namespace CS_Form
             "7",
             "8",
             "9",
-            "Textbox"
             };
         public Form1()
 
@@ -52,13 +51,13 @@ namespace CS_Form
             for (int i = 0; i < 10; i++)
 
             {
-                TestButton testButton = new TestButton(this, (i % 3) * 100, (i / 3) * 100, 100, 100, i, buttonlist[i]);
+                TestButton testButton = new TestButton(this, (i % 3) * 100, (i / 3) * 100, 100, 100, buttonlist[i]);
                 Controls.Add(testButton);
             }
 
-            _testLabel = new TestLabel(10, 400, 500, 100, "it's label");
+            _testLabel = new TestLabel(400, 0, 500, 100, "it's label");
             Controls.Add(_testLabel);
-            _testTextBox = new TestTextBox(10, 500, 500, 100, "it's textbox");
+            _testTextBox = new TestTextBox(400, 150, 500, 100, "it's textbox");
             Controls.Add(_testTextBox);
             //Label label = new Label();
             //label.Location = new Point(0, 400);
@@ -73,7 +72,7 @@ namespace CS_Form
         /// <param name="str"></param>
         public void LabelTextUpdate(string str)
         {
-            _testTextBox.TextUpdate(str);
+           
             _testLabel.TextUpdate(str);
         }
         //public void LabelTextboxUpdate(int index)
@@ -83,6 +82,11 @@ namespace CS_Form
         //    buttonlist[index] = buttonlist[10];
         //    buttonlist[10] = tmp;
         //}
-        
+        public string ButtonLabelReplacement(string str)
+        {
+           string s= _testTextBox.TextReplacement(str);
+            return s;
+        }
+
     }
 }

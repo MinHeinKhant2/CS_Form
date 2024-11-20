@@ -16,7 +16,7 @@ namespace CS_Form
         string number;
         char letter;
         
-        public TestButton(Form1 form1, int x, int y, int width, int height, int numeric,string i)
+        public TestButton(Form1 form1, int x, int y, int width, int height, string numeric)
         {
             _form1 = form1;
             //if (numeric == 0) { letter = 'a'; }
@@ -30,9 +30,9 @@ namespace CS_Form
             //if (numeric == 8) { letter = 'h'; }
             //if (numeric == 9) { letter = 'i'; }
 
-            number =i;
+            number = numeric;
             Click += OnClick;
-            Text = i;
+            Text = numeric;
             Location = new Point(x,y);
             Size = new Size(width,height);
         }
@@ -43,9 +43,12 @@ namespace CS_Form
         /// <param name="e"></param>
         public void OnClick(object sender, EventArgs e)
         {
+            string t = _form1.ButtonLabelReplacement(Text);
+            Text = t;   
             _form1.LabelTextUpdate(number);
 
         }
+     
 
 
 

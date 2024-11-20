@@ -21,9 +21,15 @@ namespace CS_Form
         }
         public void TextUpdate(string str)
         {
-            number =  str;
-            Text = number;
+            
+            Text = str;
          
+        }
+        public string TextReplacement(string str)
+        {
+            string temp = Text;
+            Text = str;
+            return temp;
         }
     }
 }
